@@ -1,0 +1,193 @@
+
+/* Main CSS*/
+
+.banner-div {
+    height: 40vh;
+    width: 100vw;
+    color: #fff;
+}
+
+.banner-div a:link,
+.banner-div a:focus,
+.banner-div a:visited,
+.banner-div a:hover  {
+    text-decoration: none;
+    color: rgb(37, 40, 73);
+}
+
+.banner-img {
+    background: linear-gradient(150deg, var(--primary-color), var(--overlay-color));
+    height: 40vh;
+    /*width: 100vh;*/
+    position: relative;
+}
+
+.banner-img::before {
+    content: "";
+    background: url('../images/bg.gif') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    z-index: -1;
+}
+
+.banner-div .page-title {
+    position: relative;
+    top: 20vh;
+    width: 60%;
+    left: 5%;
+    font-size: 3 lrem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Page Welcome Desc */
+
+.page-desc{
+    background: linear-gradient(150deg, var(--primary-color), var(--overlay-color));
+    text-align: center;
+    font-weight: 200;
+    color: #fff;
+    position: relative;
+    border: none;
+    width: 100vw;
+}
+
+.page-desc div::before {
+    content: "";
+    background: url('../images/bg1.jpg') no-repeat center center/cover;
+    /*background-color: rgb(238, 77, 77);*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.page-desc div {
+    padding: 20px;
+}
+
+.page-desc a:link,
+.page-desc a:focus,
+.page-desc a:visited,
+.page-desc a:hover  {
+    text-decoration: none;
+    color: rgb(37, 40, 73);
+}
+
+/* End of Page Welcome Desc */
+
+/* Main Page CSS */
+
+
+.main-div {
+   width: 100%;
+}
+
+.main {
+    margin: 2rem auto;
+    width: 90%;
+    display: block;
+}
+
+.pageTitle {
+    margin: 0;
+    font-weight: 300;
+    padding: 10px;
+    background-color: rgba(246, 250, 248, 0.75);
+}
+
+.box{
+    margin: 3rem;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(211, 211, 206);
+}
+
+.quote-div {
+    width: 75%;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+    /*
+    background: linear-gradient(150deg, rgb(190, 221, 162), rgba(186, 189, 30, 0.75));
+    background: -webkit-linear-gradient(#bedda2, #babd1ebf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    */
+}
+
+.quote-title {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.quote-word {
+    padding: 10px 20px;
+}
+
+.graph-box,
+.map-box,
+.insight-box {
+    width: 80%;
+    margin: 7rem 0;
+    position: relative;
+    left: 5%;
+    cursor: pointer;
+    background: rgba(236, 236, 210, 0.75); /*rgb(247, 247, 247)*/
+}
+
+.map-box {
+    position: relative;
+    left: 20%;
+}
+
+.name {
+    width: 40%;
+}
+
+.name div {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.img {
+    width: 50%;
+}
+
+.img img {
+    max-width: 75%;
+    padding: 25px;
+    float: right;
+}
+
+.graph-box .img .filter {
+    filter: invert(50%) sepia(31%) saturate(5144%) hue-rotate(162deg) brightness(96%) contrast(101%);
+}
+
+.graph-box .name div {
+    color: var(--graph);
+}
+
+.map-box .img {
+    margin-left: 1rem;
+}
+
+.map-box .name div {
+    color: var(--map);
+}
+
+.insight-box .name div {
+    color: var(--insight);
+}

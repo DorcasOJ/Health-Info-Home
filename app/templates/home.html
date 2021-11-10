@@ -1,0 +1,79 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+        
+    <div class="banner-div">
+        <div class="banner-img"> 
+            <div class="inline-menu">
+                <div class="page-title">
+                    <div>Visual <br/>Health </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-desc">
+        <div>
+            <p>Welcome to Visual health</p>
+            View <a href="#">charts</a> on open source Nigerian health data,
+            view <a href="#">maps</a> of health center in Nigeria,
+            <a href="#">locate</a> a health faculity around you,
+            and get recent health <a href="#">insight</a> in Nigeria.
+        </div>
+    </div>
+
+
+    <div class="main-div">
+        <div class="main">
+
+            <div class="quote-div">
+                <div class="quote-title">Quote for the day</div>
+                <div class="quote-word">
+                    {{ health_quote }}
+                </div>
+            </div>
+    
+            <div class="session-menu">
+                
+                <div class="card">
+                    <div class="graph-box box">
+                        <div class="name">
+                            <div>Chart</div>
+                        </div>
+                        <div class="img"> 
+                            <img src="{{ url_for('static', filename='images/svgs/line-graph.svg')}}" alt="chart-image" class="filter rotate">
+                            <!--object data="../static/images/svgs/line-graph.svg" type="image/svg+xml"></object-->
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="card">
+                    <div class="map-box box">
+                        <div class="img">
+                            <img src="{{ url_for('static', filename='images/svgs/map.svg')}}" alt="map-image" class="rotate"> 
+                        </div>
+                        <div class="name">
+                            <div>Map</div>
+                        </div>    
+                    </div>
+                </div>
+                
+    
+                <div class="card">
+                    <div class="insight-box box">
+                        <div class="name">
+                            <div>Insight</div>
+                        </div>
+                        <div class="img"> <img src="{{ url_for('static', filename='images/svgs/search-world.svg')}}" alt="imsight-image" class="filter rotate"> </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+    
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,210 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Yrsa:ital,wght@1,300&display=swap');
+
+:root {
+    --primary-color: rgba(92, 192, 145, 0.75); /* #5CC091 */
+    --overlay-color: rgba(154, 156, 9, 0.749); /* #9A9C09 */
+    --home: rgb(245, 211, 21);
+    --graph: rgba(16, 55, 224, 0.925);
+    --map: rgb(88, 206, 121);
+    --insight: rgb(211, 91, 56);
+    --contact: rgb(205, 216, 47);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    width: 100%;
+}
+
+body {
+    font-family:  'Yrsa', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: #fff;
+    color: black;
+    width: 100%;
+}
+
+header {
+    color:white;
+    /*font-size: 13px;*/
+    font-weight: 800;
+    text-transform: uppercase;
+    width: 100vw;
+    position: relative;
+    height: 45px;
+}
+
+header nav .openMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-image: linear-gradient(150deg, var(--primary-color), var(--overlay-color) );
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+}
+
+header nav .openMenu .logo {
+    width: 10%;
+    padding: 10px ;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+header nav .openMenu .logo img {
+    height: 21px;
+}
+
+header nav .openMenu .open {
+    width: 15%;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+header nav .closeMenu {
+    position: absolute;
+    top: 10px;
+    right: 45px;
+    cursor: pointer;
+}
+
+header nav .inMenu {
+    background-image: linear-gradient(150deg, var(--primary-color), var(--overlay-color) );
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    overflow: hidden;
+}
+
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    display: block;
+    padding: 1.5%;
+
+}
+
+header ul li a:visited,
+header ul li a:link {
+    text-decoration: none;
+    color: white;
+}
+
+header nav li .menu {
+    height: 5.1vh;
+}
+
+
+/* Start unique color of .menu */
+
+header nav li .home a:hover {
+    color: var(--home);
+}
+
+header nav li .graph a:hover {
+    color: var(--graph);
+}
+
+header nav li .map a:hover {
+    color: var(--map);
+}
+
+header nav li .insight a:hover {
+    color: var(--insight);
+}
+
+header nav li .contact a:hover {
+    color: var(--contact);
+}
+
+/* End unique color of .menu */
+
+
+
+/* Start .menu Font Awesome CSS */
+.menu a span {
+    padding-left: 15px;
+}
+
+.fa-bars,
+.fa-times {
+    font-size: 1.5rem;
+}
+
+.fa-home {
+    color: var(--home);
+}
+
+.fa-chart-pie {
+    color: var(--graph); 
+}
+
+.fa-map-marked-alt {
+    color: var(--map); 
+}
+
+.fa-searchengin {
+    color: var(--insight);
+}
+
+.fa-info-circle {
+    color: var(--contact);
+}
+
+.fa-twitter {
+    color: rgb(86, 154, 243);
+}
+
+.fa-github {
+    color: rgb(255, 123, 0);
+}
+
+/* End .menu Font Awesome CSS */
+
+.social span {
+    padding: 5px;
+    font-size: 12px;
+}
+
+footer {
+   /* position: absolute;
+    bottom: 0;*/
+    width: 100vw;
+    background-color: #fff; /* #f6faf8bf; rgba(235, 247, 241, 0.75); */
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+footer ul li a:visited,
+footer ul li a:link {
+    text-decoration: none;
+    color: black;
+}

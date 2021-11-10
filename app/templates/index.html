@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Health Info">
+    <meta name="description" content="Map, graph and get health insight of Nigeria">
+    
+    <link rel="health-info-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/health-info.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/health-info-32-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/health-info-16-icon.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='images/favicon//site.webmanifest') }}">
+
+    <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/social.css') }}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/large.css') }}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/print.css') }}" media="print">
+
+    <script src="{{ url_for('static', filename='scripts/main.js') }}" defer></script>
+    <title>Health Info</title>
+</head>
+<body>
+    <header>
+        <div class="wrapMenu">
+            <nav>
+                
+                <div class="openMenu"> 
+                    <div class="logo"> 
+                        <a href="{{  url_for('home_page') }}">
+                            <img src="{{ url_for('static', filename='images/favicon/health-info-32-icon.png')}}" alt="logo"> 
+                        </a>
+                    </div>
+                    <div class="open"> <i class="fa fa-bars"></i> </div>
+                </div>
+                
+                <div class="inMenu">
+                    <ul>
+                        <li>
+                            <div class="menu home">
+                                <a href="{{ url_for('home_page') }}">
+                                    <span>
+                                        <i class="fas fa-home"></i> 
+                                    </span>
+                                    Home
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu graph">
+                                <a href="#">
+                                    <span> 
+                                        <i class="fas fa-chart-pie"></i> 
+                                    </span> 
+                                    Chart
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu map">
+                                <a href="#">
+                                    <span> 
+                                        <i class="fas fa-map-marked-alt"></i> 
+                                    </span> 
+                                    Map
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu insight">
+                                <a href="#"> 
+                                    <span> 
+                                        <i class="fab fa-searchengin"></i> 
+                                    </span> 
+                                    Insight
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu contact">
+                                <a href="{{ url_for('contact_page') }}"> 
+                                    <span> 
+                                        <i class="fas fa-info-circle"></i> 
+                                    </span> 
+                                    Contact
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="social">    
+
+                                <div class="wrapper">
+                                    <div class="icon twitter">
+                                        <div class="tooltip">Twitter</div>
+                                        <span><a href="https://twitter.com"> <i class="fab fa-twitter"></i> </a></span>
+                                    </div>
+                                    
+                                    <div class="icon github">
+                                        <div class="tooltip">Github</div>
+                                        <span> <a href="https://github.com/dorcasOJ"> <i class="fab fa-github"></i></a> </span>
+                                    </div>
+                                </div>
+                                    
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="closeMenu"><i class="fa fa-times"></i> </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+
+        {% block body %}
+        {% endblock %}
+
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li> <a href="{{ url_for('contact_page') }}">Contact</a> </li>
+                <li>
+                    <div class="social">
+                        <div class="wrapper">
+                            <div class="icon twitter">
+                                <div class="tooltip">Twitter</div>
+                                <span><a href="https://twitter.com"> <i class="fab fa-twitter"></i> </a></span>
+                            </div>
+                            
+                            <div class="icon github">
+                                <div class="tooltip">Github</div>
+                                <span> <a href="https://github.com/dorcasOJ"> <i class="fab fa-github"></i></a> </span>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </li>
+            </ul>
+            </ul>
+        </nav>
+    </footer>
+
+
+</body>
+</html>
