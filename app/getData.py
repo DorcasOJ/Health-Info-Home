@@ -2,7 +2,7 @@ from flask import Flask, redirect, render_template, request, Markup, jsonify
 from os import path, walk
 import random, time
 import requests
-from .getData import quote_list, CovidData
+from getData import quote_list, CovidData
 import pandas as pd, numpy as np
 
 app = Flask(__name__)
