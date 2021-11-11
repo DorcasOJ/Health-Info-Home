@@ -1,27 +1,14 @@
-from flask import Flask, redirect, render_template, request, Markup, jsonify
-from os import path, walk
-import random, time
 import requests
-from getData import quote_list, CovidData
-import pandas as pd, numpy as np
+from bs4 import BeautifulSoup
+import os, random, time
+import pandas as pd
 
-app = Flask(__name__)
 
+# To get home page health quote        
+def quote_list():
 
-@app.route('/')
-def home_page():
-    # get quotes
-  
-    quotes = quote_list()    
-
-    return render_template('home.html', health_quote = random.choice(quotes))
-
-@app.route('/contact')
-def contact_page():
-    return render_template('contact.html')
-
-if __name__ == '__main__':
-    app.jinja_env.auto_reload = True
-    app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.jinja_env.cache = {}
-    app.run(debug = True, use_reloader = True, use_debugger= True) #port = 8005
+    with open('./app/data/health_quotes.txt', 'r') as f:
+        quotes = f.readlines()
+    quotes = [ i.strip() for i in quotes]
+    quotes = [i.replace('"', '') for i in quotes]
+    return quotes
